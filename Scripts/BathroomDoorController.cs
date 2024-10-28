@@ -3,7 +3,7 @@ using UnityEngine;
 public class BathroomDoorController : MonoBehaviour
 {
     private bool canOpen = true;
-    private bool isOpen = false; // Track whether the door is currently open or closed
+    private bool isOpen = false;
 
     [SerializeField] private Animator doorAnimator; 
 
@@ -14,13 +14,13 @@ public class BathroomDoorController : MonoBehaviour
             if (!isOpen)
             {
                 doorAnimator.SetTrigger("OpenDoor");
-                isOpen = true; // Update the state to indicate the door is now open
+                isOpen = true;
                 Debug.Log("Door is opening.");
             }
             else
             {
                 doorAnimator.SetTrigger("CloseDoor");
-                isOpen = false; // Update the state to indicate the door is now closed
+                isOpen = false;
                 Debug.Log("Door is closing.");
             }
         }
