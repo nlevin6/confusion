@@ -17,7 +17,6 @@ public class LightSwitchRaycast : MonoBehaviour
 
         if (Physics.Raycast(transform.position, fwd, out RaycastHit hit, rayLength))
         {
-            // Check for all possible interactable objects
             var lightSwitch = hit.collider.GetComponent<LightSwitchController>();
             var deskLamp = hit.collider.GetComponent<DeskLampController>();
             var doorBed = hit.collider.GetComponent<BedroomDoorController>();
